@@ -12,10 +12,7 @@ const PORT = process.env.PORT || 8080;
 app.use(cors());
 app.use(express.json());
 
-const dbPassword = process.env.PASSWORD;
-const mongoUri =
-  process.env.MONGO_URL ||
-  `mongodb+srv://emilfloren96:${dbPassword}@cluster0.zqvkbro.mongodb.net/?appName=Cluster0`;
+const mongoUri = process.env.MONGO_URL;
 
 const connectDB = async () => {
   try {
