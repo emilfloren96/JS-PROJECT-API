@@ -15,7 +15,7 @@ app.use(express.json());
 const dbPassword = process.env.PASSWORD;
 const mongoUri =
   process.env.MONGO_URL ||
-  `mongodb+srv://artakjato:${dbPassword}@clusterhappythoughts.fhtetam.mongodb.net/?appName=ClusterHappyThoughts`;
+  `mongodb+srv://emilfloren96:${dbPassword}@cluster0.zqvkbro.mongodb.net/?appName=Cluster0`;
 
 const connectDB = async () => {
   try {
