@@ -12,7 +12,6 @@ Error handling with proper HTTP status codes
 
 Database seeding with sample data
 
-
 Tech Stack
 
 Node.js
