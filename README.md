@@ -42,20 +42,6 @@ DELETE	/thoughts/:id	Delete a thought
 POST	/thoughts/:id/like	Like a thought (+1 heart)
 
 
-Getting Started
-
-Install dependencies: npm install
-
-Create a .env file with your MongoDB connection string:MONGO_URL=mongodb+srv://your-connection-string
-
-RESET_DB=true
-
-Start the server: npm run dev
-
-After seeding, set RESET_DB=false in .env
-
-View it live
-
 Frontend: https://js-project-happy-thoughts.pages.dev/
 
 Backend: https://js-project-api-o624.onrender.com/
