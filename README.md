@@ -57,5 +57,7 @@ After seeding, set RESET_DB=false in .env
 
 View it live
 
+Frontend: https://js-project-happy-thoughts.pages.dev/
+
 Backend: https://js-project-api-o624.onrender.com/
 
