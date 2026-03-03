@@ -1,8 +1,8 @@
 Key Features
 
-Full CRUD operations: Create, Read, Update, and Delete thoughts
+/_ API Integration Update _/
 
-Like (heart) a thought
+Full CRUD operations: Create, Read, Update, and Delete thoughts
 
 Data stored in MongoDB with Mongoose models
 
@@ -24,25 +24,22 @@ dotenv
 
 API Endpoints
 
+Method Path Description
 
-Method	Path	Description
+GET / API documentation
 
-GET	/	API documentation
+GET /thoughts Get all thoughts (newest first, limit 20)
 
-GET	/thoughts	Get all thoughts (newest first, limit 20)
+GET /thoughts/:id Get a single thought by ID
 
-GET	/thoughts/:id	Get a single thought by ID
+POST /thoughts Create a new thought
 
-POST	/thoughts	Create a new thought
+PATCH /thoughts/:id Update a thought
 
-PATCH	/thoughts/:id	Update a thought
+DELETE /thoughts/:id Delete a thought
 
-DELETE	/thoughts/:id	Delete a thought
-
-POST	/thoughts/:id/like	Like a thought (+1 heart)
-
+POST /thoughts/:id/like Like a thought (+1 heart)
 
 Frontend: https://js-project-happy-thoughts.pages.dev/
 
 Backend: https://js-project-api-o624.onrender.com/
-
