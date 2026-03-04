@@ -6,12 +6,12 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 // POST register a new user
 export const signup = async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { username, email, password } = req.body;
 
-    if (!email || !password) {
+    if (!username || !email || !password) {
       return res.status(400).json({
         success: false,
-        error: "Email and password are required",
+        error: "Username, email and password are required",
       });
     }
 
@@ -42,7 +42,7 @@ export const signup = async (req, res) => {
     const salt = await bcrypt.genSalt();
     const encryptedPassword = await bcrypt.hash(password, salt);
 
-    const newUser = new User({ email: cleanEmail, password: encryptedPassword });
+    const newUser = new User({ username, email: cleanEmail, password: encryptedPassword });
     await newUser.save();
 
     return res.status(201).json({

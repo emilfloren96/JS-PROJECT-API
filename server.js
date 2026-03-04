@@ -9,7 +9,16 @@ import userRouter from "./routes/userRoutes.js";
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-app.use(cors());
+const allowedOrigins = [
+  'http://localhost:5173', // Vite dev server
+  'http://localhost:5174',
+  'http://localhost:5175',
+  process.env.FRONTEND_URL, // Set this to your deployed frontend URL (e.g. https://your-app.pages.dev)
+].filter(Boolean);
+
+app.use(cors({
+  origin: allowedOrigins,
+}));
 app.use(express.json());
 
 const mongoUri = process.env.MONGO_URL;
